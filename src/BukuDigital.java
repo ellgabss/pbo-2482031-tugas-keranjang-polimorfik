@@ -1,4 +1,4 @@
-public class BukuDigital extends Buku {
+public class BukuDigital extends Buku implements BisaDiunduh {
 
     private double ukuranMB;
 
@@ -15,5 +15,10 @@ public class BukuDigital extends Buku {
     @Override
     public String keterangan() {
         return ukuranMB + " MB, diskon 20%";
+    }
+
+    @Override
+    public String linkUnduh() {
+        return "https://toko.buku/ebook/" + getJudul().toLowerCase().replace(' ', '-');
     }
 }

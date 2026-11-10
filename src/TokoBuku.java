@@ -14,6 +14,7 @@ public class TokoBuku {
         BukuDigital digital = new BukuDigital("Belajar OOP", "Ani Wijaya", 80000, 12.5);
 
         Buku[] keranjang = { cetak1, cetak2, digital };
+        BisaDiunduh[] unduhan = { digital };
         // Percobaan: Buku b = new Buku("X", "Y", 1); menghasilkan
         // Pesan error: Buku is abstract; cannot be instantiated
         // Baris percobaan dijadikan komentar supaya program bisa di-compile lagi.
@@ -24,5 +25,12 @@ public class TokoBuku {
         }
         System.out.println("-----------------------------------------");
         System.out.println("Total bayar   : " + Buku.formatRupiah(hitungTotal(keranjang)));
+
+
+        System.out.println();
+        System.out.println("============== LINK UNDUH ===============");
+        for (BisaDiunduh unduh : unduhan) {
+            System.out.println(unduh.linkUnduh());
+        }
     }
 }
